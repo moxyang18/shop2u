@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Product implements Serializable{
 	
+	private static final long serialVersionUID = 2681790028794260184L;
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -349433539553804024L;
 	private Long productId;
 	private String productName;
 	private String productDesc;
