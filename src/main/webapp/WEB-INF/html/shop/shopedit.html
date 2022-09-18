@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Shop Info</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet"
+	href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+<link rel="stylesheet"
+	href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+	<header class="bar bar-nav">
+		<h1 class="title">Shop Info</h1>
+	</header>
+	<div class="content">
+		<div class="list-block">
+			<ul>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-name"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Shop Name</div>
+							<div class="item-input">
+								<input type="text" id="shop-name" placeholder="shop name">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Shop Category</div>
+							<div class="item-input">
+								<select id="shop-category">
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Area</div>
+							<div class="item-input">
+								<select id="area">
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Detailed Address</div>
+							<div class="item-input">
+								<input type="text" id="shop-addr" placeholder="详细地址">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Contact Phone</div>
+							<div class="item-input">
+								<input type="tel" id="shop-phone" placeholder="联系电话">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Shop Preview</div>
+							<div class="item-input">
+								<input type="file" id="shop-img" placeholder="联系电话">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<div class="item-title label">Shop Description</div>
+							<div class="item-input">
+								<textarea placeholder="shop description" id="shop-desc"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="icon icon-form-email"></i>
+						</div>
+						<div class="item-inner">
+							<label for="j_captcha" class="item-title label">Verification Code</label> <input
+								id="j_captcha" name="j_captcha" type="text"
+								class="form-control in" placeholder="verification code" />
+							<div class="item-input">
+								<img id="captcha_img" alt="click to refresh" title="click to refresh"
+									onclick="changeVerifyCode(this)" src="../Kaptcha" />
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<div class="content-block">
+			<div class="row">
+				<div class="col-50">
+					<a href="/myo2o/shop/shopmanage"
+						class="button button-big button-fill button-danger">Back</a>
+				</div>
+				<div class="col-50">
+					<a href="#" class="button button-big button-fill" id="submit">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type='text/javascript'
+		src='//g.alicdn.com/sj/lib/zepto/zepto.js' charset='utf-8'></script>
+	<script type='text/javascript'
+		src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript'
+		src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript'
+		src='../resources/js/common/commonutil.js' charset='utf-8'></script>
+	<script type='text/javascript' src='../resources/js/shop/shopedit.js'
+		charset='utf-8'></script>
+</body>
+</html>

@@ -28,7 +28,7 @@ import com.moxuan.shop2u.entity.ShopCategory;
 import com.moxuan.shop2u.enums.ProductCategoryStateEnum;
 import com.moxuan.shop2u.enums.ShopStateEnum;
 import com.moxuan.shop2u.service.AreaService;
-import com.moxuan.shop2u.service.LocalAuthService;
+//import com.moxuan.shop2u.service.LocalAuthService;
 import com.moxuan.shop2u.service.ShopCategoryService;
 import com.moxuan.shop2u.service.ShopService;
 import com.moxuan.shop2u.util.CodeUtil;
@@ -73,7 +73,7 @@ public class ShopManagementController {
 			modelMap.put("errMsg", e.toString());
 		}
 		return modelMap;
-	}
+	}*/
 
 	@RequestMapping(value = "/getshopbyid", method = RequestMethod.GET)
 	@ResponseBody
