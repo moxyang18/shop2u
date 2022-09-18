@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -18,6 +19,7 @@ import com.moxuan.shop2u.entity.Area;
 import com.moxuan.shop2u.enums.AreaStateEnum;
 import com.moxuan.shop2u.service.AreaService;
 
+@Service
 public class AreaServiceImpl implements AreaService{
 	
 	
