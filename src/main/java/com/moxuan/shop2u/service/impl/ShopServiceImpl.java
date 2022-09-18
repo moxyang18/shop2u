@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.moxuan.shop2u.dao.ShopCategoryDao;
 import com.moxuan.shop2u.dao.ShopDao;
 import com.moxuan.shop2u.dto.ShopExecution;
 import com.moxuan.shop2u.entity.Shop;

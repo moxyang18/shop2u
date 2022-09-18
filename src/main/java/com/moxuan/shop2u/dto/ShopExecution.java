@@ -5,7 +5,7 @@ import java.util.List;
 import com.moxuan.shop2u.entity.Shop;
 import com.moxuan.shop2u.enums.ShopStateEnum;
 
-/* encapsulate dao functions in dto to include execution state and other info */
+/* this class defines what service functions will return */
 public class ShopExecution {
 
 	private int state;
