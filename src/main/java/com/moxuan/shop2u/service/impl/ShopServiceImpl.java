@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.moxuan.shop2u.dao.ShopAuthMapDao;
 import com.moxuan.shop2u.dao.ShopCategoryDao;
 import com.moxuan.shop2u.dao.ShopDao;
 import com.moxuan.shop2u.dto.ShopExecution;
 import com.moxuan.shop2u.entity.Shop;
+import com.moxuan.shop2u.entity.ShopAuthMap;
 import com.moxuan.shop2u.entity.ShopCategory;
 import com.moxuan.shop2u.enums.ShopStateEnum;
 import com.moxuan.shop2u.service.ShopService;
@@ -82,21 +84,21 @@ public class ShopServiceImpl implements ShopService {
 			}
 			int effectedNum = shopDao.insertShop(shop);
 			if (effectedNum <= 0) {
-				throw new RuntimeException("店铺创建失败");
+				throw new RuntimeException("Shop creation error");
 			} else {
 				try {
 					if (shopImg != null) {
 						addShopImg(shop, shopImg);
 						effectedNum = shopDao.updateShop(shop);
 						if (effectedNum <= 0) {
-							throw new RuntimeException("创建图片地址失败");
+							throw new RuntimeException("Shop update error");
 						}
 					}
 				} catch (Exception e) {
 					throw new RuntimeException("addShopImg error: "
 							+ e.getMessage());
 				}
-				// 执行增加shopAuthMap操作
+				// add shopAuthMap operation
 				ShopAuthMap shopAuthMap = new ShopAuthMap();
 				shopAuthMap.setEmployeeId(shop.getOwnerId());
 				shopAuthMap.setShopId(shop.getShopId());
@@ -110,7 +112,7 @@ public class ShopServiceImpl implements ShopService {
 					effectedNum = shopAuthMapDao.insertShopAuthMap(shopAuthMap);
 					if (effectedNum <= 0) {
 						throw new RuntimeException("Authorization fail");
-					} else {// 创建成功
+					} else {// create success
 						return new ShopExecution(ShopStateEnum.CHECK, shop);
 					}
 				} catch (Exception e) {
