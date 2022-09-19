@@ -20,6 +20,7 @@ import com.moxuan.shop2u.util.FileUtil;
 import com.moxuan.shop2u.util.ImageUtil;
 import com.moxuan.shop2u.util.PageCalculator;
 
+@Service
 public class ShopServiceImpl implements ShopService {
 
 	@Autowired
